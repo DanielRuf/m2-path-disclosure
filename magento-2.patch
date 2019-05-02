@@ -1,0 +1,11 @@
+--- lib/internal/Magento/Framework/App/Router/ActionList.php	2019-02-18 21:53:21.047122700 +0100
++++ lib/internal/Magento/Framework/App/Router/ActionList.php	2019-05-02 18:26:49.463065300 +0200
+@@ -91,7 +91,7 @@
+         if ($area) {
+             $area = '\\' . $area;
+         }
+-        if (strpos($namespace, self::NOT_ALLOWED_IN_NAMESPACE_PATH) !== false) {
++        if (stripos($namespace, self::NOT_ALLOWED_IN_NAMESPACE_PATH) !== false) {
+             return null;
+         }
+         if (in_array(strtolower($action), $this->reservedWords)) {
